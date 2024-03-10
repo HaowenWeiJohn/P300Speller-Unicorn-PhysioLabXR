@@ -9180,7 +9180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcom to Neureality Hackathon Typing Challenge.
+  m_text: "Welcom to Neureality Hackathon CortexType \nP300 Speller"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10029,8 +10029,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 1
-  trainLetters: 010000000200000008000000
-  repeatTimesTrain: 5
+  trainLetters: 01000000
+  repeatTimesTrain: 1
   flashDurationTrain: 0.1
   flashIntervelTrain: 0.1
   repeatTimesTest: 5
@@ -10044,6 +10044,7 @@ MonoBehaviour:
   WelcomeStateGUI: {fileID: 379314933}
   TrailStateGUI: {fileID: 1343441726}
   eventMarkerLSLOutletController: {fileID: 2111591963}
+  predictionLSLInletController: {fileID: 1627991054}
 --- !u!4 &961943826
 Transform:
   m_ObjectHideFlags: 0
