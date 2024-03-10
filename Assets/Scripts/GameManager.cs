@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.XR.OpenVR;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -51,10 +52,12 @@ public class GameManager : MonoBehaviour
         TrailStateGUI.SetActive(false);
 
         // connect the button to the function
+
         StartTrainButton.onClick.AddListener(TrainButtonClicked);
         StartTestButton.onClick.AddListener(TestButtonClicked);
 
 
+        
 
     }
 
@@ -65,6 +68,23 @@ public class GameManager : MonoBehaviour
     {
         InterruptButtonPresssed();
 
+        OVRInput.Update();
+        if (OVRInput.GetDown(OVRInput.Button.One))
+        {
+            Debug.Log("button one pressed");
+            if (WelcomeStateGUI.active)
+            {
+                TrainButtonClicked();
+            } else
+            {
+                boardController.ContinueButtonClicked();
+            }
+        }
+        if (OVRInput.GetDown(OVRInput.Button.Two))
+        {
+            Debug.Log("button two pressed");
+            TestButtonClicked();
+        }
 
     }
 
